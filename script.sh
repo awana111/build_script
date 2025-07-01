@@ -19,7 +19,7 @@ echo "Sync success"
 echo "============="
 
 # Export
-export BUILD_USERNAME=kyura
+export BUILD_USERNAME=awana
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
