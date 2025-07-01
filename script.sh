@@ -1,7 +1,31 @@
 rm -rf .repo/local_manifests/
-repo init -u https://github.com/Arrow-OS-Extended/android_manifest.git -b arrow-13.1 --git-lfs 
-git clone https://github.com/ikwfahmi/local_manifests --depth 1 -b arrow .repo/local_manifests 
-/opt/crave/resync.sh 
-source build/envsetup.sh 
-lunch arrow_X00T-userdebug  
-m bacon
+
+#repo init
+repo init --depth=1 -u https://github.com/DroidX-UI/manifest.git -b 15_v2 --git-lfs
+echo "=================="
+echo "Repo init success"
+echo "=================="
+
+#local_manifest
+git clone https://github.com/awana111/local_manifests.git -b Droid .repo/local_manifests
+echo "============================"
+echo "Local manifest clone success"
+echo "============================"
+
+#Sync
+/opt/crave/resync.sh
+echo "============="
+echo "Sync success"
+echo "============="
+
+# Export
+export BUILD_USERNAME=kyura
+export BUILD_HOSTNAME=crave
+echo "======= Export Done ======"
+
+# Set up build environment
+. build/envsetup.sh
+echo "====== Envsetup Done ======="
+
+#build
+lunch droidx_X00TD-bp1a-userdebug && make installclean && m bacon
