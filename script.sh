@@ -1,13 +1,13 @@
 rm -rf .repo/local_manifests/
 
 #repo init
-repo init --depth=1 -u https://github.com/DroidX-UI/manifest.git -b 15_v2 --git-lfs
+repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b Droid .repo/local_manifests
+git clone https://github.com/ikwfahmi/local_manifests.git -b Rising .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -28,4 +28,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch droidx_X00TD-bp1a-userdebug && make installclean && m bacon
+breakfast X00TD userdebug && make installclean && rise b
