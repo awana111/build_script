@@ -12,6 +12,8 @@ echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
+rm -rf prebuilts/clang/host/linux-x86
+
 #Sync
 /opt/crave/resync.sh
 echo "============="
