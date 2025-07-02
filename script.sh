@@ -1,4 +1,5 @@
 rm -rf .repo/local_manifests/
+rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
 repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs
@@ -11,8 +12,6 @@ git clone https://github.com/awana111/local_manifests.git -b Rising .repo/local_
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
-
-rm -rf prebuilts/clang/host/linux-x86
 
 #Sync
 /opt/crave/resync.sh
