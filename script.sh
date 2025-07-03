@@ -2,13 +2,13 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init --depth=1 -u https://github.com/DroidX-UI/manifest.git -b 15_v2 --git-lfs
+repo init -u https://github.com/2by2-Project/manifest.git -b Vanadium --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b Droid .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b 2by2 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch droidx_X00TD-bp1a-userdebug && make installclean && m bacon
+lunch X00TD-userdebug && make installclean && m bacon
