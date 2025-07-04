@@ -2,13 +2,13 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init -u https://github.com/The-Clover-Project/manifest.git -b 15-qpr2 --git-lfs
+repo init -u https://github.com/pos-gm/manifest.git -b fifteen --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/ikwfahmi/local_manifests.git -b Clover .repo/local_manifests
+git clone https://github.com/ikwfahmi/local_manifests.git -b pixelos .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -22,7 +22,7 @@ echo "============="
 #nuke soong
 rm -rf build/soong
 
-git clone https://github.com/ikwfahmi/build_soong -b 15-qpr2 build/soong
+git clone https://github.com/awana111/build_soong -b fifteen build/soong
 
 # Export
 export BUILD_USERNAME=kyura
@@ -34,4 +34,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch clover_X00TD-bp1a-userdebug && make installclean && mka clover
+breakfast X00TD userdebug && make installclean && mka bacon
