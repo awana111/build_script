@@ -8,7 +8,7 @@ echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/ikwfahmi/local_manifests.git -b pixelos .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b pixelos .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
