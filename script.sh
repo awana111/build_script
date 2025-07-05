@@ -34,4 +34,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-axion X00TD va userdebug && make installclean && ax -br
+axion X00TD va && make installclean && ax -br
