@@ -2,13 +2,13 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init -u https://github.com/pos-gm/manifest.git -b fifteen --git-lfs
+repo init -u https://github.com/The-Clover-Project/manifest.git -b 15-qpr2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b pixelos .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b Clover .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-breakfast X00TD userdebug && make installclean && mka bacon
+lunch clover_X00TD-bp1a-userdebug && make installclean && mka clover
