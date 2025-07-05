@@ -2,13 +2,13 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init -u https://github.com/HorizonV2/android.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/ikwfahmi/local_manifests.git -b horizon .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b Axion .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch lineage_X00TD-bp1a-userdebug && make installclean && mka horizon
+axion X00TD va user && make installclean && ax -br
