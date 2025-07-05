@@ -25,7 +25,7 @@ rm -rf build/soong
 git clone https://github.com/awana111/android_build_soong -b lineage-22.2 build/soong
 
 # Export
-export BUILD_USERNAME=kyura
+export BUILD_USERNAME=awana
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
