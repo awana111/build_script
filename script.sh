@@ -2,13 +2,13 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-15.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b pixelage .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b Alpha .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch pixelage_X00TD-bp1a-userdebug && make installclean && mka bacon
+brunch X00TD && make installclean
