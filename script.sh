@@ -8,7 +8,7 @@ echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/ikwfahmi/local_manifests.git -b Spark .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b Spark .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -20,7 +20,7 @@ echo "Sync success"
 echo "============="
 
 # Export
-export BUILD_USERNAME=kyura
+export BUILD_USERNAME=awana
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
