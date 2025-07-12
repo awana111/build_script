@@ -8,7 +8,7 @@ echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b Spark .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b Main .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch spark_X00TD-userdebug && make installclean && mka bacon
+lunch spark_X00T-user && make installclean && mka bacon
