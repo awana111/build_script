@@ -1,5 +1,6 @@
 rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf hardware/qcom-caf/msm8998
 
 #repo init
 repo init -u https://github.com/Spark-NEXT/manifest -b pyro-next --git-lfs
