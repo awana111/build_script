@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch spark_X00T-user && make installclean && mka bacon
+lunch spark_X00TD-userdebug && make installclean && mka bacon
