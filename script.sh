@@ -3,7 +3,7 @@ rm -rf prebuilts/clang/host/linux-x86
 rm -rf hardware/qcom-caf/msm8998
 
 #repo init
-repo init -u https://github.com/Spark-NEXT/manifest -b pyro-next --git-lfs
+repo init -u https://github.com/hentaiOS/platform_manifest -b Vallhound --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -30,4 +30,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch spark_X00TD-userdebug && make installclean && mka bacon
+lunch aosp_X00TD-bp1a-user && make installclean && mka bacon
