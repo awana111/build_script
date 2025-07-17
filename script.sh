@@ -1,15 +1,14 @@
 rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf hardware/qcom-caf/msm8998
 
 #repo init
-repo init -u https://github.com/hentaiOS/platform_manifest -b Vallhound --git-lfs
+repo init --depth=1 -u https://github.com/CorvusAOSP-Revived/manifest.git -b 11
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b Main .repo/local_manifests
+git clone https://github.com/awana111/local_manifests.git -b los18 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -30,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch aosp_X00TD-bp1a-user && make installclean && mka bacon
+lunch corvus_X00TD-userdebug && make installclean && make corvus
