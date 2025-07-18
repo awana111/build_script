@@ -2,7 +2,7 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init --depth=1 -u https://github.com/CorvusAOSP-Revived/manifest.git -b 11
+repo init -u https://github.com/Havoc-OS-Revived/android_manifest.git -b eleven --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -29,4 +29,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch corvus_X00TD-userdebug && make installclean && make corvus
+lunch havoc_X00TD-userdebug && make installclean && m bacon
