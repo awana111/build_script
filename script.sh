@@ -2,7 +2,8 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 #repo init
-repo init -u https://github.com/LineageOS-Revived/android.git -b lineage-18.1 --git-lfs
+repo init -u https://github.com/awana111/manifest.git -b 11 --git-lfs
+
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -29,4 +30,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch lineage_X00TD-userdebug && make installclean && mka bacon
+lunch corvus_X00TD-userdebug && make installclean && make corvus
