@@ -1,15 +1,16 @@
 rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf device/asus/X00T
+rm -rf device/asus/sdm660-common
 
 #repo init
-repo init -u https://github.com/awana111/manifest.git -b 11 --git-lfs
-
+repo init -u https://github.com/Spark-NEXT/manifest -b pyro-next --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 #local_manifest
-git clone https://github.com/awana111/local_manifests.git -b los18 .repo/local_manifests
+git clone https://github.com/ikwfahmi/local_manifests.git -b Spark .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -21,7 +22,7 @@ echo "Sync success"
 echo "============="
 
 # Export
-export BUILD_USERNAME=awana
+export BUILD_USERNAME=kyura
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
@@ -30,4 +31,4 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 #build
-lunch corvus_X00TD-userdebug && make installclean && make corvus
+lunch spark_X00TD-user && make installclean && mka bacon
